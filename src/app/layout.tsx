@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "ECIP",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Toaster position="top-right" />
       </body>
     </html>
   );
